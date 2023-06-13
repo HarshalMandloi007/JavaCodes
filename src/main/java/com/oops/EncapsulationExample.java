@@ -1,5 +1,7 @@
-class Student
-{
+package com.oops;
+
+class Student1
+{ 
     private int roll_no;
     String name;
 
@@ -22,7 +24,7 @@ class Student
 
 public class EncapsulationExample {
     public static void main(String[] args) {
-        Student s = new Student();
+        Student1 s = new Student1();
         s.setRoll_no(101);
         s.setName("Abhay");
         System.out.println(s.getRoll_no());

@@ -1,3 +1,5 @@
+package com.oops;
+
 interface Bank1{
     float rateOfInterest();
 }
@@ -22,7 +24,7 @@ public class InterfaceExample {
     public static void main(String[] args) {
         Bank1 b = new HDFC();
         Bank1 b1 = new IDFC();
-        System.out.println("HDFC rate of interest is: " + b.rateOfInterest());
-        System.out.println("IDFC rate of interest is: " + b1.rateOfInterest());
+        System.out.println("com.oops.HDFC rate of interest is: " + b.rateOfInterest());
+        System.out.println("com.oops.IDFC rate of interest is: " + b1.rateOfInterest());
     }
 }

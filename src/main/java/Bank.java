@@ -24,14 +24,14 @@ class BankAccount{
     }
 
 
-    void deposit(double amount){
+    public void deposit(double amount){
         if(amount!=0){
             bal+=amount;
             prevTrans=amount;
         }
     }
 
-    void withdraw(double amt){
+    public void withdraw(double amt){
         if(amt!=0 && bal>=amt){
             bal-=amt;
             prevTrans=-amt;
@@ -41,7 +41,7 @@ class BankAccount{
         }
     }
 
-    void getPreviousTrans(){
+    public void getPreviousTrans(){
         if(prevTrans>0){
             System.out.println("Deposited: "+prevTrans);
         }

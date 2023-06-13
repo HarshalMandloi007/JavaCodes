@@ -2,14 +2,15 @@ package com.oops;
 // Classes and Objects
 public class Human {
 
-    public void eat()
+    public String eat()
     {
-        System.out.println("Eating");
+
+        return "Eating";
     }
 
-    public void walk()
+    public String walk()
     {
-        System.out.println("Walking");
+        return "Walking";
     }
 
     public static void main(String[] args) {

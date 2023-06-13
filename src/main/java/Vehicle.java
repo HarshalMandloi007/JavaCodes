@@ -1,18 +1,18 @@
 abstract class Vehicle {
-    abstract void start();
+    abstract Object start();
 }
 
 class Car extends Vehicle
 {
     @Override
-    void start() {
-        System.out.println("Car start with key");
+    Object start() {
+        return "Car start with key";
     }
 }
 
 class Bike extends Vehicle {
-    void start() {
-        System.out.println("Bike start with kick");
+    Object start() {
+        return "Bike start with kick";
     }
 
 

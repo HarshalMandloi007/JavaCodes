@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class Student1Test {
     @Test
-    public void testSetName() {
+    public void should_set_name_and_rollno() {
         Student1 student1 = new Student1();
         student1.setName("Abhay");
         student1.setRoll_no(102);

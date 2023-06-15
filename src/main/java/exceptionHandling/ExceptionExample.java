@@ -9,7 +9,7 @@ public class ExceptionExample {
         int a = sc.nextInt();
 
         try {
-            int x = a/3;
+            int x = a/0;
             System.out.println(x);
         }
         catch (Exception e){

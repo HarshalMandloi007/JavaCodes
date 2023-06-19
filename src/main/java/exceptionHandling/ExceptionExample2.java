@@ -22,6 +22,6 @@ public class ExceptionExample2 {
             System.out.println("Exception Handled");
         }
         finally {
-            System.out.println("This code always be executed");
+            System.out.println("This code always be executed ");
         }
     }}

@@ -1,7 +1,5 @@
 package exceptionHandling;
 
-import java.util.Scanner;
-
 class NotEligibleException extends RuntimeException
 {
     NotEligibleException(String msg)
@@ -12,9 +10,13 @@ class NotEligibleException extends RuntimeException
 
 public class ExceptionExample3 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your age");
-        int age = sc.nextInt();
+
+        ExceptionExample3 ee = new ExceptionExample3();
+    }
+
+    public int validateAge(int age) {
+
+
         if(age<18){
             throw new NotEligibleException("Your age is less than 18");
         }
@@ -22,5 +24,6 @@ public class ExceptionExample3 {
             System.out.println("You are eligible for getting license");
         }
 
+        return age;
     }
 }

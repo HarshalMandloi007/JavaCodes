@@ -1,23 +1,37 @@
 package TestExample;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 public class AssertExample {
-    public static int y;
-    public static int foo(int x)
-    {
-        System.out.print("foo ");
-        y = x;
-        return x;
+    public static boolean shouldPass = true;
+
+    private String isConnectedToDatabase() {
+        try {
+            double random = Math.random();
+            boolean isGreaterThanPoint5 = random > 0.5;
+            if (shouldPass && isGreaterThanPoint5) {
+                System.out.println(random + " " + (isGreaterThanPoint5));
+            } else {
+                throw new RuntimeException("unable to connect to database");
+            }
+            return "";
+        } catch (Exception e) {
+            StringWriter stringWriter = new StringWriter();
+            PrintWriter printWriter = new PrintWriter(stringWriter);
+            e.printStackTrace(printWriter);
+            return stringWriter.toString();
+        }
     }
-    public static int bar(int z)
-    {
-        System.out.print("bar ");
-        return y = z;
-    }
-    public static void main(String [] args )
-    {
-        int t = 0;
-        assert t > 0 : bar(7);
-        assert t > 1 : foo(8); /* Line 18 */
+
+    public static void main(String[] args) {
+        new AssertExample().extracted();
         System.out.println("done ");
+    }
+
+    public void extracted() {
+        String connectedToDatabase = new AssertExample().isConnectedToDatabase();
+
+        assert connectedToDatabase.length() == 0 : connectedToDatabase;
     }
 }

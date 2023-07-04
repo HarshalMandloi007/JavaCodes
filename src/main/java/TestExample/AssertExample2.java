@@ -9,10 +9,10 @@ public class AssertExample2 {
     public static void main(String [] args)
     {
         int z = 5;
-        assert z > 0; /* Line 11 */
-        assert z > 2: foo(z); /* Line 12 */
+        assert z > 0;
+        assert z > 2: foo(z);
         if ( z < 7 )
-            assert z > 4; /* Line 14 */
+            assert z > 4;
 
         switch (z)
         {
@@ -22,7 +22,7 @@ public class AssertExample2 {
         }
 
         if ( z < 10 )
-            assert z > 4: z++; /* Line 22 */
+            assert z > 4: z++;
         System.out.println(z);
     }
 }

@@ -8,7 +8,7 @@ class SC2
         s.start();
     }
 
-    void start()
+    int start()
     {
         int a = 3;
         int b = 4;
@@ -17,6 +17,8 @@ class SC2
         System.out.print(" " + a + b + " ");
         System.out.print(foo() + a + b + " ");
         System.out.println(a + b + foo());
+        int result = a*b;
+        return result;
     }
 
     String foo()
